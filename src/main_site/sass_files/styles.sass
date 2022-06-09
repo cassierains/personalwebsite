@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&family=Nunito&family=PT+Sans&family=Parisienne&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+body 
+    background: linear-gradient(135deg, #aa41ff, #d15eff,#d883ff)
+    background-repeat: no-repeat
+    background-attachment: fixed
+    width: 100%
+    height: 100%
+    margin: 0
+
+.header
+    display: flex
+    align-items: center
+    justify-content: center
+    background: linear-gradient(135deg,#3720ff, #5643ff, #796ce7)
+    color: rgb(238, 238, 238)
+    margin: -0%
+
+    @media (max-width:1440px)
+        flex-direction: column
+
+
+h1 //this is the name at the top of the page
+    font-family: 'Great Vibes', cursive
+    font-size: 60px
+    margin-bottom: 2%
+    padding-top: 5px
+    padding-bottom: 5px
+    padding-left: 10%
+    padding-right: 25px
+
+.navButton
+    color: rgb(238, 238, 238)
+    display: flex
+    justify-content: center
+    text-decoration: none
+    list-style-type: none
+    background-color: none
+    font-family: 'Great Vibes', cursive
+    padding-top: 10%
+    font-size: 34px
+    width: 125px
+    height: 40px
+    padding-left: 20%
+    padding-right: 20%
+
+    //button styling for desktop
+    @media (min-width:1440px)
+        width: 115px
+        height: 45px
+        padding-left: 20%
+        padding-right: 20%
+
+    //button styling for mobile
+    @media (max-width:900px)
+        font-size: 28px
+        width: 105px
+        height: 35px
+        padding-left: 5%
+        padding-right: 5%
+
+.navButton:hover 
+    transition-duration: .1s
+    transform: scale(1.1)
+
+    // remove hover animation for better mobile experience
+    @media (max-width:900px)
+        transform: none
+    
+
+.navButton:active
+    transform: scale(1.05)
+    transition-duration: .1s
+
+    // update active animation for better mobile experience
+    @media (max-width:900px)
+        transform: scale(.95)
+        transition-duration: .1s
+
+
+.navbar //this is the container that the buttons are in
+    list-style: none
+    justify-content: right
+    display: flex
+    flex-direction: row
+    width: auto
+    
+
+    //styling for desktop
+    @media (max-width:1440px)
+        margin-bottom: 2%
+
+.title //this is the title for each section
+    color: rgb(238, 238, 238)
+    font-family: 'Great Vibes', cursive
+    font-size: 48px
+    margin-left: 18%
+    margin-top: 2%
+    margin-bottom: 2%
+
+    //styling for mobile
+    @media (max-width:900px)
+        font-size: 36px
+
+.text //this is the text inside the body itself
+    position: relative
+    color: rgb(238, 238, 238)
+    background-image: linear-gradient(135deg,#3720ff, #5643ff, #796ce7)
+    line-height: 2
+    margin-bottom: 2%
+    margin-top: 2%
+    margin-left: 15%
+    margin-right: 15%
+    padding-top: 15px
+    padding-bottom: 15px
+    padding-left: 35px
+    padding-right: 35px
+    font-family: 'DM Sans', sans-serif
+
+    //text styling for desktop
+    font-size: 18px
+
+    //text styling for mobile
+    @media (max-width:900px)
+        font-size: 16px
+
+.text::before 
+  position: absolute
+  content: ""
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-image: linear-gradient(135deg,#432eff, #6352fd, #8b81e6)
+  z-index: -1
+  transition: opacity 0.2s
+  opacity: 0
+
+.text:hover::before 
+  opacity: 1
+
+.text:hover
+    transform: scale(1.02)
+    box-shadow: 0px 0px 5px 5px #00000040
+    transition-duration: .2s
+
+    // remove hover animation for better mobile experience
+    @media (max-width:900px)
+        transform: none
+        box-shadow: none
+
+
+.portfolioDisplay
+    display: flex
+    justify-content: center
+    margin-bottom: 2%
+
+.portfolioDisplay:hover
+    cursor: pointer
+
+.portfolioLink
+    height: 75%
+    width: 75%
+    border-radius: 10px
+    
