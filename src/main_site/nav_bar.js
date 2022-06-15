@@ -8,13 +8,13 @@ const NavBar = () => {
         <Link to="/" className='navButton'>About</Link>
       </li>
       <li>
-        <Link to="/Resume" className='navButton'>Resume</Link>
+        <Link to="/resume" className='navButton'>Resume</Link>
       </li>
       <li>
-        <Link to="/WebApps" className='navButton'>Apps</Link>
+        <Link to="/apps" className='navButton'>Apps</Link>
       </li>
       <li>
-        <Link to="/Projects" className='navButton'>Projects</Link>
+        <Link to="/projects" className='navButton'>Projects</Link>
       </li>
     </div>
   );
