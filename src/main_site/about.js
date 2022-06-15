@@ -21,16 +21,16 @@ const AboutBody = () => {
             </div>
 
             <div className='text'>
-                This website was built entirely using React and Sass for styling.
+                This website was built entirely using React, with Sass for styling, and Netlify for Hosting.
             </div>
 
             <div className='title'>
                 What's New?
             </div>
-            <WordPortfolio />
             <div className='text'>
                 You can learn more about these web pages on the "Apps" tab!
             </div>
+            <WordPortfolio />
         </div>
     );
 };

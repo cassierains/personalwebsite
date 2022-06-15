@@ -5,17 +5,14 @@ import WordPortfolio from './wordpressPortfolio';
 const WebAppsBody = () => {
     return(
         <>
-            <div className="text">
-                Here you will find applications I've built! 
-                As I build them they will be added here!
-            </div>
-
             <div className="title">
                 WordPress Portfolio
             </div>
 
             <div className="text">
                 These web pages were created using just the basic functionalities of WordPress!
+                I've begun freelancing building websites and I wanted a quick, low-cost option
+                for clients. Wordpress is one of the best platforms to do that on!
             </div>
             
             <WordPortfolio />

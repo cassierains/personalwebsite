@@ -51,10 +51,11 @@ const Technologies = () => {
                 Programming Languages, Packages and Technologies
             </div>
             <div className='text'>
+                JavaScript(React, Sass/Scss)<br/>
                 Python(scikit-learn, pandas, seaborn), R(tidyverse, dplyr, knitr)<br/>
                 SQL<br/>
                 Jupyter Notebook<br/>
-                HTML, CSS(sass/scss), JavaScript(react)<br/>
+                Netlify<br/>
             </div>
         </>
     );
@@ -67,7 +68,8 @@ const Education = () => {
                 Education
             </div>
             <div className='text'>
-                UMass Amherst, Bachelor of Science, Neuroscience (quantitative) - 3.927 GPA (December 2022)<br/>
+                UMass Amherst, Bachelor of Science, Neuroscience (quantitative) - 3.927 GPA (December 2022*)<br/>
+                *I only have one more class left so I have plenty of time to work<br/>
             </div>
         </>
     );
