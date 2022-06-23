@@ -13,9 +13,6 @@ const NavBar = () => {
       <li>
         <Link to="/apps" className='navButton'>Apps</Link>
       </li>
-      <li>
-        <Link to="/projects" className='navButton'>Projects</Link>
-      </li>
     </div>
   );
 }

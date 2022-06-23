@@ -1,10 +1,16 @@
 import React from 'react';
 import Header from './header';
-import WordPortfolio from './wordpressPortfolio';
+import WordPortfolio from './apps/wordpressPortfolio';
+import BiochemCalculator from './apps/biochem_calc';
+
 
 const WebAppsBody = () => {
     return(
         <>
+            <div className="title">
+                Biochemistry Calculator
+            </div>
+            <BiochemCalculator />
             <div className="title">
                 WordPress Portfolio
             </div>

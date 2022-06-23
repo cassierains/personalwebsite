@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './header';
-import WordPortfolio from './wordpressPortfolio';
 import './sass_files/styles.css'
+import BiochemCalculator from './apps/biochem_calc';
 
 const AboutBody = () => {
     return(
@@ -28,9 +28,9 @@ const AboutBody = () => {
                 What's New?
             </div>
             <div className='text'>
-                You can learn more about these web pages on the "Apps" tab!
+                You can learn more about this app on the "Apps" tab!
             </div>
-            <WordPortfolio />
+            <BiochemCalculator />
         </div>
     );
 };

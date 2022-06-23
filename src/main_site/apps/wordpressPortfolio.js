@@ -1,8 +1,8 @@
 import React from 'react'
-import socmed from './pictures/soc_med.png'
-import urhome from './pictures/ur_home.png'
-import urkarn from './pictures/ur_karn.png'
-import blogcomments from './pictures/blog_comments.png'
+import socmed from '../pictures/soc_med.png'
+import urhome from '../pictures/ur_home.png'
+import urkarn from '../pictures/ur_karn.png'
+import blogcomments from '../pictures/blog_comments.png'
 
 //these are the functions that open a new window when the wordpress example images are clicked
 function linkMedToSite() {window.open("https://mysocialmedia982271996.wordpress.com/")}
