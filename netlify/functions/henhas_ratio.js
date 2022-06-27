@@ -11,6 +11,7 @@ exports.handler = async function (event, context) {
     }
     return {
         statusCode: 200,
-        body: JSON.stringify({message: henHasRatio(input.pH, input.pKa)
-    })}
+        body: JSON.stringify({message: henHasRatio(input.pH, input.pKa)})
+    }
+    
 }

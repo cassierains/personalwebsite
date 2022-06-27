@@ -7,13 +7,13 @@ const HenHasPka = () => {
         pH: 0.0,
         ratio: 0.0
     });//state for the input paramaters
-
+    //handle the pha change from user
     const handlePhChange = (event) => {
         event.persist();
         setState((values) => ({
             ...values,
             pH: event.target.value,
-        }));//handle the pka change from user
+        }));
     };
 
     const handleRatioChange = (event) => {
@@ -26,9 +26,13 @@ const HenHasPka = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetchData()
+        if (state.pH>14 || state.pH<0) {
+            setMessage('Invalid pH. pH must not be greater than 14 or less than 0')// returns message if ph is invalid
+        } else {
+            fetchData()
+        }
     };
-
+    //shows result
     const Displays = () => {
         return(
             <div className="Outputs">
@@ -38,7 +42,7 @@ const HenHasPka = () => {
             </div>
         );
     };
-
+    //api function
     async function fetchData(pH, ratio) {
         //post request to send to the backend
         let res = await axios.post('/.netlify/functions/henhas_pka', {
@@ -64,7 +68,7 @@ const HenHasPka = () => {
                     Input ratio
                     <input className="calcInputs" type="number" value={state.ratio} onChange={handleRatioChange} />
                 </label>
-                <input className="calcSubmit" type="submit" value={"Submit"} />
+                <input className="calcInputs" type="submit" value={"Submit"} />
             </form>
 
             <Displays />

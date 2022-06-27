@@ -15,6 +15,7 @@ const HenHasRatio = () => {
             pH: event.target.value,
         }));//handle the pka change from user
     };
+        
 
     const handlePkaChange = (event) => {
         event.persist();
@@ -26,9 +27,13 @@ const HenHasRatio = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetchData()
+        if (state.pH>14 || state.pH<0) {
+            setMessage('Invalid pH. pH must not be greater than 14 or less than 0');// returns message if ph is invalid
+        } else {
+            fetchData()
+        };
     };
-
+    //api function
     async function fetchData(pH, pKa) {
         //post request to send to the backend
         let res = await axios.post('/.netlify/functions/henhas_ratio', {
@@ -64,7 +69,7 @@ const HenHasRatio = () => {
                     Input pKa
                     <input className="calcInputs" type="number" value={state.pKa} onChange={handlePkaChange} />
                 </label>
-                <input className="calcSubmit" type="submit" value={"Submit"} />
+                <input className="calcInputs" type="submit" value={"Submit"} />
             </form>
 
             <Displays />

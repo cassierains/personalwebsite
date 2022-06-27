@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import socmed from '../pictures/soc_med.png'
 import urhome from '../pictures/ur_home.png'
 import urkarn from '../pictures/ur_karn.png'
@@ -12,37 +12,40 @@ function linkUrKaSite() {window.open("https://urzaedh.wordpress.com/2022/05/22/d
 // define the objects that will be a part of the portfolio
 const SocMed = () => {
     return (
-        <div className='portfolioDisplay'>
+        <>
             <img className='portfolioLink'
                 src={socmed}
                 alt="social media hub website link"
+                value={1}
                 onClick={linkMedToSite}>
             </img>
-        </div>
+        </>
     );
 };
 
 const UrHome = () => {
     return (
-        <div className='portfolioDisplay'>
+        <>
             <img className='portfolioLink'
                 src={urhome}
                 alt="urza edh blog post link"
+                value={2}
                 onClick={linkUrHoToSite}>
             </img>
-        </div>
+        </>
     );   
 };
 
 const UrKarn = () => {
     return (
-        <div className='portfolioDisplay'>
+        <>
             <img className='portfolioLink'
                 src={urkarn}
                 alt="urza edh blog home link"
+                value={3}
                 onClick={linkUrKaSite}>
             </img>
-        </div>
+        </>
     );
 };
 
@@ -50,24 +53,51 @@ const UrKarn = () => {
 
 const Comments = () => {
     return (
-        <div className='portfolioDisplay'>
+        <>
             <img className='portfolioLink'
                 src={blogcomments}
                 alt="urza edh blog comments via karn post link"
+                value={4}
                 onClick={linkUrKaSite}>
             </img>
-        </div>
+        </>
     );
 };
 
+
 const WordPortfolio = () => {
+    const[display, setDisplay] = useState(1)//portfolio example state
+    //define the function to move between portfolio examples
+    function wordpressNext() {
+        if (display === 4) {
+            setDisplay(1)
+        } else {
+            setDisplay(display + 1)
+        }
+    }
+    function wordpressPrevious() {
+        if (display === 1) {
+            setDisplay(4)
+        } else {
+            setDisplay(display - 1)
+        }
+    }
     return (
-        <>
-            <UrHome />
-            <UrKarn />
-            <Comments />
-            <SocMed />
-        </>
+        <div className='portfolioWhole'>
+            <button className="portfolioNav" onClick={wordpressPrevious}>{"<"}</button>
+
+            {display === 1 ? (
+                <SocMed />):
+            display === 2 ? (
+                <UrHome />):
+            display === 3 ? (
+                <UrKarn />):
+            display === 4 ? (
+                <Comments />): (
+                <SocMed />)
+            }
+            <button className="portfolioNav" onClick={wordpressNext}>{">"}</button>
+        </div>
     );
 };
 

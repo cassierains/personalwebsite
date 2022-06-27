@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&family=Nunito&family=PT+Sans&family=Parisienne&display=swap");
 .biochemcalc {
   background: #e9e9e9;
   color: #434343;
@@ -60,6 +61,17 @@
   border: none;
 }
 
+@media (max-width: 900px) {
+  .calcSelect {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+.calcSelect:hover {
+  cursor: pointer;
+}
+
 .calcInputs {
   border-radius: 15px;
   color: #e9e9e9;
@@ -72,14 +84,14 @@
   border: none;
 }
 
-.calcSubmit {
-  border-radius: 15px;
-  color: #e9e9e9;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 20px;
-  padding: 20px;
-  background: #870000;
-  border: none;
+@media (max-width: 900px) {
+  .calcInputs {
+    font-size: 14px;
+  }
+}
+
+.calcInputs {
+  cursor: pointer;
 }
 
 .Outputs {
@@ -94,22 +106,38 @@
   }
 }
 
-body {
-  background: linear-gradient(135deg, #aa41ff, #d15eff, #d883ff);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-
-.header {
+.portfolioLink {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  width: 70%;
+  border-radius: 10px;
+}
+
+.portfolioLink:hover {
+  cursor: pointer;
+}
+
+.portfolioNav {
+  background-color: #303030;
+  color: #eeeeee;
+  height: 150px;
+  width: 50px;
+  font-size: 24px;
+}
+
+.portfolioNav:hover {
+  cursor: pointer;
+}
+
+.portfolioWhole {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -117,45 +145,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background: linear-gradient(135deg, #3720ff, #5643ff, #796ce7);
-  color: #eeeeee;
-  margin-top: -0%;
-  margin-bottom: 2%;
-  width: 100%;
-}
-
-@media (max-width: 1440px) {
-  .header {
-    padding-top: 2%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Great Vibes', cursive;
-  font-size: 60px;
-}
-
-@media (max-width: 500px) {
-  h1 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    font-size: 48px;
-  }
 }
 
 .navButton {
@@ -267,6 +259,70 @@ h1 {
   }
 }
 
+body {
+  background: linear-gradient(135deg, #aa41ff, #d15eff, #d883ff);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: linear-gradient(135deg, #3720ff, #5643ff, #796ce7);
+  color: #eeeeee;
+  margin-top: -0%;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+@media (max-width: 1440px) {
+  .header {
+    padding-top: 2%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 48px;
+  }
+}
+
 .title {
   color: #eeeeee;
   font-family: 'Great Vibes', cursive;
@@ -307,11 +363,6 @@ h1 {
 
 .text::before {
   position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   background-image: linear-gradient(135deg, #432eff, #6352fd, #8b81e6);
   z-index: -1;
   -webkit-transition: opacity 0.2s;
@@ -341,23 +392,9 @@ h1 {
   }
 }
 
-.portfolioDisplay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 2%;
-}
-
-.portfolioDisplay:hover {
-  cursor: pointer;
-}
-
-.portfolioLink {
-  height: 75%;
-  width: 75%;
-  border-radius: 10px;
+.textLink {
+  color: #eeeeee;
+  text-decoration: none;
+  list-style: none;
 }
 /*# sourceMappingURL=styles.css.map */

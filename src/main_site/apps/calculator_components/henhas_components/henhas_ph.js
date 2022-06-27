@@ -38,7 +38,7 @@ const HenHasPh = () => {
             </div>
         );
     };
-
+    //api function
     async function fetchData(pKa, ratio) {
         //post request to send to the backend
         let res = await axios.post('/.netlify/functions/henhas_ph', {
@@ -64,7 +64,7 @@ const HenHasPh = () => {
                     Input ratio
                     <input className="calcInputs" type="number" value={state.ratio} onChange={handleRatioChange} />
                 </label>
-                <input className="calcSubmit" type="submit" value={"Submit"} />
+                <input className="calcInputs" type="submit" value={"Submit"} />
             </form>
 
             <Displays />
