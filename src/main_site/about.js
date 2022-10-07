@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from './header';
-import WordPortfolio from './wordpressPortfolio';
 import './sass_files/styles.css'
+import BiochemCalculator from './apps/biochem_calc';
+import { Link } from 'react-router-dom';
 
 const AboutBody = () => {
     return(
@@ -27,10 +28,10 @@ const AboutBody = () => {
             <div className='title'>
                 What's New?
             </div>
+            <BiochemCalculator />
             <div className='text'>
-                You can learn more about these web pages on the "Apps" tab!
+                <Link to="/apps" className='textLink'>You can learn more about this app on the "Apps" tab!</Link>
             </div>
-            <WordPortfolio />
         </div>
     );
 };

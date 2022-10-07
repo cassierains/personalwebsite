@@ -13,6 +13,7 @@ const Jobs = () => {
                 HopeLab (imi app) - April 2022-May 2022(short contract)<br/>
                 &emsp; Extensively tested the "imi" app<br/>
                 &emsp; Found 78 UI/UX bugs<br/>
+                &emsp; Presented findings in a spreadsheet with an accompanying video<br/>
             </div>
         </>
     );
@@ -55,7 +56,7 @@ const Technologies = () => {
                 Python(scikit-learn, pandas, seaborn), R(tidyverse, dplyr, knitr)<br/>
                 SQL<br/>
                 Jupyter Notebook<br/>
-                Netlify<br/>
+                Netlify(including back-end serverless functions)<br/>
             </div>
         </>
     );
